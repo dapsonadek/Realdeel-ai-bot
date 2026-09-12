@@ -1,0 +1,6 @@
+import Link from "next/link";
+import SiteHeader from "../../components/SiteHeader";
+import SiteFooter from "../../components/SiteFooter";
+
+const work = [["RealDeel AI Trading Bot","Automated trading technology and onboarding funnel."],["MT4 / MT5 Automation","Indicators, Expert Advisors and account-management tools."],["Trade Copier","One-click trade copying for multi-account workflows."],["Crypto Automation","Bot concepts and integrations for crypto trading platforms."]];
+export default function Portfolio(){return <><SiteHeader/><main><section className="page-hero"><div className="eyebrow">SELECTED WORK</div><h1>Technology built for<br/><span>real-world workflows.</span></h1><p>A selection of trading automation and software projects developed through years of hands-on work.</p></section><section className="section"><div className="portfolio-grid">{work.map(([title,text],i)=><article className="portfolio-card" key={title}><div className="product-number">0{i+1}</div><h3>{title}</h3><p>{text}</p></article>)}</div></section><section className="dark-band"><div><div className="eyebrow light">DEVELOPMENT EXPERIENCE</div><h2>Need proof before you start?</h2><p>View the public development portfolio and client reviews on Freelancer.com.</p><Link href="/contact" className="gold-button">Request a Project Review →</Link></div></section></main><SiteFooter/></>}
