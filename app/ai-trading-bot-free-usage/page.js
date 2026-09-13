@@ -85,7 +85,7 @@ export default function AIBotFree() {
       </section>
 
       <section className={styles.control}>
-        <div className={styles.controlVisual}><img src="/homepage-assets/hero-trading-v2.webp" alt="Automated trading workstation" /></div>
+        <div className={styles.controlVisual}><video autoPlay muted loop playsInline preload="metadata" poster="/homepage-assets/ai-bot-v3.webp" aria-label="RealDeel AI trading bot demonstration"><source src="/ai-trading-bot.mp4" type="video/mp4" /></video></div>
         <div className={styles.controlContent}>
           <div className={styles.eyebrow}>AUTOMATION WITHOUT GIVING UP CONTROL</div>
           <h2>YOUR FUNDS STAY IN YOUR TRADING ACCOUNT.</h2>
@@ -116,6 +116,7 @@ export default function AIBotFree() {
       </section>
 
       <footer className={styles.footer}>
+        <div className={styles.moreServices}><span>More ways to trade, automate and grow</span><Link href="/#services">Explore More RealDeel Solutions <b>→</b></Link></div>
         <Link href="/" className={styles.brand}>
           <span className={styles.logoMark}><img src="/realdeel-logo.JPG" alt="" /></span>
           <span>ReaLDeeL <em>AI</em></span>
