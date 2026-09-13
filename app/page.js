@@ -1,56 +1,30 @@
 import Link from "next/link";
+import styles from "./home.module.css";
 
-const internalLinks = [
-  ["/", "Home", "30.0%", "1.0%", "4.2%", "2.8%"],
-  ["/trading", "Services", "35.8%", "1.0%", "7.6%", "2.8%"],
-  ["/about", "About", "44.8%", "1.0%", "5.0%", "2.8%"],
-  ["/portfolio", "Portfolio", "50.3%", "1.0%", "6.0%", "2.8%"],
-  ["/blog", "Blog", "56.8%", "1.0%", "4.2%", "2.8%"],
-  ["/contact", "Contact", "62.1%", "1.0%", "5.8%", "2.8%"],
-  ["/ai-trading-bot-free-usage", "Get Started", "82.0%", "0.7%", "12.5%", "3.0%"],
-  ["/trading", "Explore Our Services", "5.5%", "16.4%", "19.5%", "3.2%"],
-  ["/ai-trading-bot-free-usage", "Use RealDeel AI Bot 100%", "3.5%", "28.8%", "30.4%", "22.7%"],
-  ["/copytrading", "Copy your Trades with RealDeel", "35.4%", "28.8%", "29.6%", "22.7%"],
-  ["/ai-trading-bot", "Buy RealDeel AI Bot", "66.3%", "28.8%", "30.3%", "22.7%"],
-  ["/trade-copier", "Buy our Copy Trading Software", "3.5%", "52.2%", "30.4%", "22.7%"],
-  ["/development", "Develop Your Trading Software", "35.4%", "52.2%", "29.6%", "22.7%"],
-  ["/ai-automation", "AI Automation for beginners", "66.3%", "52.2%", "30.3%", "22.7%"],
+const services = [
+  {tone:"green",icon:"🤖",image:"/homepage-assets/ai-bot.webp",title:"Use RealDeel AI Bot 100%.",subtitle:"Zero Trading Experience Required",text:"Let our AI bot analyze the market and trade for you automatically. No experience needed.",points:["Fully automated trading","Professional risk management","Suitable for beginners","Consistent and data-driven strategy"],cta:"Get Started",href:"/ai-trading-bot-free-usage"},
+  {tone:"blue",icon:"♟",image:"/homepage-assets/copy-trading.webp",title:"Copy your Trades with RealDeel",subtitle:"Beginners and Experienced Traders",text:"Follow and copy proven traders automatically. A simple way to trade with experienced hands.",points:["Copy top performing traders","Easy setup and management","Transparent performance","Ideal for all trader levels"],cta:"Learn More",href:"/copytrading"},
+  {tone:"purple",icon:"⚙",image:"/homepage-assets/personal-bot.webp",title:"Buy RealDeel AI Bot For Your Personal Use",subtitle:"Highly Efficient Strategy",text:"Get your own copy of the RealDeel AI Bot and trade on your terms. A powerful strategy, optimized for results.",points:["Proven and tested strategy","Customizable settings","Lifetime access (no subscription)","Full setup guide and support"],cta:"View Details",href:"/trading"},
+  {tone:"orange",icon:"▥",image:"/homepage-assets/trade-copier.webp",title:"Buy our Copy Trading Software",subtitle:"One-Click Execution For Trade Managers",text:"Manage multiple accounts with ease. A reliable copy trading solution for professional traders and account managers.",points:["One-click trade execution","Multi-account management","Custom allocation and risk control","Reliable and easy to use"],cta:"Learn More",href:"/trade-copier"},
+  {tone:"cyan",icon:"</>",image:"/homepage-assets/development.webp",title:"Develop Your Trading Software",subtitle:"MT4/MT5 EA, NT8 Strategy, Pine Scripts",text:"Custom trading tools built to your needs. From ideas to fully functional solutions.",points:["MT4/MT5 Expert Advisors (EA)","NinjaTrader 8 Strategies (NT8)","TradingView Pine Scripts","Custom indicators and tools"],cta:"Request a Quote",href:"/development"},
+  {tone:"pink",icon:"▶",image:"/homepage-assets/ai-automation.webp",title:"AI Automation for beginners.",subtitle:"Faceless YouTube - No Face, No Voice, No Editing Skills. Just AI",text:"Learn how to create and grow a faceless YouTube channel using AI. Simple steps, powerful results.",points:["Step-by-step guidance","Tools and templates","Niche and content ideas","Monetization strategies"],cta:"Learn More",href:"/ai-automation"}
 ];
 
-const reviewLinks = [
-  ["Peter review", "1.3%"],
-  ["Jay review", "17.8%"],
-  ["Joaquin review", "34.3%"],
-  ["Chen Chong review", "50.6%"],
-  ["Ifionu review", "66.8%"],
-  ["Oliver review", "83.0%"],
+const reviews = [
+  ["P","Peter","🇦🇺","$350 AUD","3 months ago","Hi, developer did a great job, we worked through an issue with the development scope sensibly and I got what I wanted quickly and with minimal fuss."],
+  ["J","Jay","🇺🇸","$1,700 USD","4 months ago","Great work! Eniola O. really knows what she is doing and is very responsive with any question or concerns about anything, I highly recommend."],
+  ["J","Joaquin","🇦🇷","$1,850 USD","1 year ago","At the beginning of work cost to understand each other, but in the end we could speak and coordinate perfectly. Professional, recommended."],
+  ["J","Chen Chong","🇲🇾","$550 USD","1 year ago","Eniola has successfully completed my 2nd project. Her work ethics are excellent and her technical expertise is remarkable. Highly recommend."],
+  ["I","Ifionu","🇳🇬","$420 USD","1 year ago","Great developer. Delivered exactly what I needed. Communication was smooth and the project was completed successfully. I highly recommend."],
+  ["O","Oliver","🇧🇬","$420 USD","1 year ago","Great experience! Delivered high-quality work, understood the requirements clearly, and was very responsive throughout the project. Highly recommend."]
 ];
+const profile="https://www.freelancer.com/u/dapsonadek";
 
-export default function Home() {
-  return (
-    <main className="approved-homepage">
-      <div className="approved-canvas">
-        <img src="/approved-homepage.webp" alt="RealDeel FX homepage showing trading automation services, six service cards and verified Freelancer.com client reviews." />
-        {internalLinks.map(([href,label,left,top,width,height]) => (
-          <Link key={label} href={href} aria-label={label} className="design-hotspot" style={{left,top,width,height}} />
-        ))}
-        {reviewLinks.map(([label,left], index) => (
-          <a
-            key={label}
-            href={index === 4
-              ? "https://www.freelancer.com/projects/c-programming/Engulfing-Candlestick-F/reviews"
-              : index === 5
-                ? "https://www.freelancer.com/projects/testing-qa/Trading-Strategy-coding-PineScript-for/reviews"
-                : "https://www.freelancer.com/u/dapsonadek"}
-            target="_blank"
-            rel="noreferrer"
-            aria-label={label}
-            className="design-hotspot"
-            style={{left,top:"82.1%",width:"15.5%",height:"10.8%"}}
-          />
-        ))}
-        <a href="https://www.freelancer.com/u/dapsonadek" target="_blank" rel="noreferrer" aria-label="View more reviews on Freelancer.com" className="design-hotspot" style={{left:"36.3%",top:"94.3%",width:"27.3%",height:"3.2%"}} />
-      </div>
-    </main>
-  );
-}
+export default function Home(){return <main className={styles.page}>
+  <section className={styles.hero}><div className={styles.heroBackdrop}/>
+    <header className={styles.header}><Link href="/" className={styles.logo}><b>R</b><span>RealDeel<em>FX</em><small>AUTOMATE · TRADE · GROW</small></span></Link><nav><Link className={styles.active} href="/">Home</Link><a href="#services">Services⌄</a><Link href="/about">About</Link><Link href="/portfolio">Portfolio</Link><a href="#">Blog</a><Link href="/contact">Contact</Link></nav><Link href="/ai-trading-bot-free-usage" className={styles.outlineButton}>Get Started <span>→</span></Link></header>
+    <div className={styles.heroGrid}><div className={styles.heroCopy}><div className={styles.kicker}>SMART TOOLS. REAL TRADERS. BETTER RESULTS.</div><h1>TURN OPPORTUNITIES<br/><span>INTO RESULTS.</span></h1><p>Professional trading tools, automation and development services designed to help you trade, work and grow with confidence.</p><a href="#services" className={styles.solidButton}>Explore Our Services <span>→</span></a><div className={styles.trust}><span>▥ <b>Reliable Tools</b></span><span>♢ <b>Practical Solutions</b></span><span>♟ <b>Trader Focused</b></span></div></div><div className={styles.heroArt}><img src="/homepage-assets/hero-trading.webp" alt="RealDeel automated trading workstation"/><i>Trade<br/>Work<br/>Automate<br/>Grow</i></div></div>
+  </section>
+  <section className={styles.services} id="services"><div className={styles.sectionIntro}><span>OUR SERVICES</span><h2>Everything You Need to Trade, Automate and Grow</h2><p>Choose the service that fits your goals and take the next step with RealDeel.</p></div><div className={styles.serviceGrid}>{services.map(s=><article key={s.title} className={`${styles.card} ${styles[s.tone]}`}><div className={styles.cardImage}><img src={s.image} alt=""/><b>{s.icon}</b></div><div className={styles.cardBody}><h3>{s.title}</h3><h4>{s.subtitle}</h4><p>{s.text}</p><ul>{s.points.map(p=><li key={p}>{p}</li>)}</ul><Link href={s.href}>{s.cta}<span>→</span></Link></div></article>)}</div></section>
+  <section className={styles.reviews}><div className={styles.reviewIntro}><span>CUSTOMER SATISFACTION</span><h2>Clients Adore Our Works, And You Will Too.</h2><p>Real feedback from our clients on Freelancer.com</p></div><div className={styles.reviewGrid}>{reviews.map((r,i)=><article className={styles.review} key={r[1]}><div className={styles.reviewTop}><b>{r[0]}</b><div><strong>{r[2]} {r[1]}</strong><span>★★★★★ <small>5.0</small></span></div><div><strong>{r[3]}</strong><small>{r[4]}</small></div></div><p>“{r[5]}”</p><a href={i===4?"https://www.freelancer.com/projects/c-programming/Engulfing-Candlestick-F/reviews":i===5?"https://www.freelancer.com/projects/testing-qa/Trading-Strategy-coding-PineScript-for/reviews":profile} target="_blank" rel="noreferrer">View on Freelancer.com → ↗</a></article>)}</div><div className={styles.reviewFooter}><i>Trusted<br/>by Traders Worldwide</i><a href={profile} target="_blank" rel="noreferrer" className={styles.solidButton}>View More Reviews on Freelancer.com → ↗</a><i>Real People<br/>Real Results</i></div></section>
+</main>}
