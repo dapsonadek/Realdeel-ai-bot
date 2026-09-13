@@ -5,7 +5,7 @@ export default function SiteHeader() {
     <header className="site-header">
       <div className="nav-wrap">
         <Link href="/" className="site-brand">
-          <span className="brand-mark">RD</span>
+          <img className="brand-logo" src="/realdeel-logo.JPG" alt="RealDeel logo" />
           <span>RealDeel <b>FX</b></span>
         </Link>
         <nav className="main-nav">

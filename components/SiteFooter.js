@@ -5,7 +5,7 @@ export default function SiteFooter() {
     <footer className="site-footer">
       <div className="footer-grid">
         <div>
-          <div className="site-brand footer-brand"><span className="brand-mark">RD</span><span>RealDeel <b>FX</b></span></div>
+          <div className="site-brand footer-brand"><img className="brand-logo" src="/realdeel-logo.JPG" alt="RealDeel logo" /><span>RealDeel <b>FX</b></span></div>
           <p>Trading technology, automation and AI solutions built for traders, trading businesses and people ready to automate.</p>
         </div>
         <div><h4>Explore</h4><Link href="/trading">Trading</Link><Link href="/development">Development</Link><Link href="/ai-automation">AI Automation</Link></div>

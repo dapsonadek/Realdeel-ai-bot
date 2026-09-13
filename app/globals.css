@@ -8,3 +8,5 @@
 .design-hotspot{position:absolute;z-index:3;display:block;border-radius:12px;line-height:normal}
 .design-hotspot:focus-visible{outline:3px solid #00f1dc;outline-offset:2px;background:rgba(0,241,220,.08)}
 @media(min-width:1440px){.approved-canvas{max-width:1440px}}
+.brand-logo{width:48px;height:48px;object-fit:contain;object-position:center;border-radius:9px;background:#fff}
+.footer-brand .brand-logo{width:54px;height:54px}
