@@ -85,7 +85,7 @@ export default function AIBotFree() {
       </section>
 
       <section className={styles.control}>
-        <div className={styles.controlVisual}><video autoPlay muted loop playsInline preload="metadata" poster="/homepage-assets/ai-bot-v3.webp" aria-label="RealDeel AI trading bot demonstration"><source src="/ai-trading-bot.mp4" type="video/mp4" /></video></div>
+        <div className={styles.controlVisual}><video autoPlay muted controls playsInline preload="metadata" poster="/homepage-assets/ai-bot-v3.webp" aria-label="RealDeel AI trading bot demonstration"><source src="/ai-trading-bot.mp4" type="video/mp4" /></video></div>
         <div className={styles.controlContent}>
           <div className={styles.eyebrow}>AUTOMATION WITHOUT GIVING UP CONTROL</div>
           <h2>YOUR FUNDS STAY IN YOUR TRADING ACCOUNT.</h2>
