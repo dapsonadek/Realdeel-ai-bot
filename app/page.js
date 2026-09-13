@@ -1,298 +1,32 @@
-"use client";
+import Link from "next/link";
+import styles from "./home.module.css";
+import SiteFooter from "../components/SiteFooter";
 
-import { useState } from "react";
+const services = [
+  {tone:"green",icon:"🤖",image:"/homepage-assets/ai-bot-v3.webp",title:"Use RealDeel AI Bot 100%.",subtitle:"Zero Trading Experience Required",text:"Let our AI bot analyze the market and trade for you automatically. No experience needed.",points:["Fully automated trading","Professional risk management","Suitable for beginners","Consistent and data-driven strategy"],cta:"Get Started",href:"/ai-trading-bot-free-usage"},
+  {tone:"blue",icon:"♟",image:"/homepage-assets/copy-trading-v3.webp",title:"Copy your Trades with RealDeel",subtitle:"Beginners and Experienced Traders",text:"Follow and copy proven traders automatically. A simple way to trade with experienced hands.",points:["Copy top performing traders","Easy setup and management","Transparent performance","Ideal for all trader levels"],cta:"Learn More",href:"/copytrading"},
+  {tone:"purple",icon:"⚙",image:"/homepage-assets/personal-bot-v3.webp",title:"Buy RealDeel AI Bot For Your Personal Use",subtitle:"Highly Efficient Strategy",text:"Get your own copy of the RealDeel AI Bot and trade on your terms. A powerful strategy, optimized for results.",points:["Proven and tested strategy","Customizable settings","Lifetime access (no subscription)","Full setup guide and support"],cta:"View Details",href:"/trading"},
+  {tone:"orange",icon:"▥",image:"/homepage-assets/trade-copier-v3.webp",title:"Buy our Copy Trading Software",subtitle:"One-Click Execution For Trade Managers",text:"Manage multiple accounts with ease. A reliable copy trading solution for professional traders and account managers.",points:["One-click trade execution","Multi-account management","Custom allocation and risk control","Reliable and easy to use"],cta:"Learn More",href:"/trade-copier"},
+  {tone:"cyan",icon:"</>",image:"/homepage-assets/development-v3.webp",title:"Develop Your Trading Software",subtitle:"MT4/MT5 EA, NT8 Strategy, Pine Scripts",text:"Custom trading tools built to your needs. From ideas to fully functional solutions.",points:["MT4/MT5 Expert Advisors (EA)","NinjaTrader 8 Strategies (NT8)","TradingView Pine Scripts","Custom indicators and tools"],cta:"Request a Quote",href:"/development"},
+  {tone:"pink",icon:"▶",image:"/homepage-assets/ai-automation-v3.webp",title:"AI Automation for beginners.",subtitle:"Faceless YouTube - No Face, No Voice, No Editing Skills. Just AI",text:"Learn how to create and grow a faceless YouTube channel using AI. Simple steps, powerful results.",points:["Step-by-step guidance","Tools and templates","Niche and content ideas","Monetization strategies"],cta:"Learn More",href:"/ai-automation"}
+];
 
-const TELEGRAM_URL = "https://t.me/RealDeelAI_bot";
+const reviews = [
+  ["P","Peter","🇦🇺","$350 AUD","3 months ago","Hi, developer did a great job, we worked through an issue with the development scope sensibly and I got what I wanted quickly and with minimal fuss.","https://www.freelancer.com/projects/mql4/Custom-Time-Grid-Indicator/details"],
+  ["J","Jay","🇺🇸","$1,700 USD","4 months ago","Great work! Eniola O. really knows what she is doing and is very responsive with any question or concerns about anything, I highly recommend.","https://www.freelancer.com/projects/backtesting/SMA-EMA-Based-NinjaTrader-Scaling/details"],
+  ["J","Joaquin","🇦🇷","$1,850 USD","1 year ago","At the beginning of work cost to understand each other, but in the end we could speak and coordinate perfectly. Professional, recommended.","https://www.freelancer.com/projects/mql4/Trading-Development/details"],
+  ["J","Chen Chong","🇲🇾","$550 USD","1 year ago","Eniola has successfully completed my 2nd project. Her work ethics are excellent and her technical expertise is remarkable. Highly recommend.","https://www.freelancer.com/projects/software-architecture/Convert-script-39507717/details"],
+  ["I","Ifionu","🇳🇬","$670 USD","1 year ago","Great developer. Delivered exactly what I needed. Communication was smooth and the project was completed successfully. I highly recommend.","https://www.freelancer.com/projects/c-programming/Engulfing-Candlestick-Forex-Bot/details"],
+  ["O","Oliver","🇧🇬","$750 USD","1 year ago","Great experience! Delivered high-quality work, understood the requirements clearly, and was very responsive throughout the project. Highly recommend.","https://www.freelancer.com/projects/testing-qa/Trading-Strategy-coding-PineScript-for/details"]
+];
+const profile="https://www.freelancer.com/u/sdqtrades";
 
-export default function Home() {
-  const [openFaq, setOpenFaq] = useState(null);
-
-  const faqs = [
-    {
-      question: "Is the AI trading bot really free to use?",
-      answer:
-        "There is no subscription fee charged for access to the RealDeel AI bot. A compatible trading account and server/VPS infrastructure may be required.",
-    },
-    {
-      question: "Do I need any trading experience to use ReaLDeel AI Bot?",
-      answer:
-        "No. Even with zero knowledge and experience, you can use the bot because everything is automated. We will share materials that can improve your trading knowledge (ebooks and videos) if you wish to know more about trading.",
-    },
-    {
-      question: "Do I need to manually place trades?",
-      answer:
-        "No. Once the system is configured and activated, trade execution is automated according to the bot's programmed strategy.",
-    },
-    {
-      question: "Do I remain in control of my trading account?",
-      answer:
-        "Yes. Your funds remain in your compatible trading account. You retain control of your account and are responsible for your account decisions.",
-    },
-    {
-      question: "Can I withdraw my funds?",
-      answer:
-        "Withdrawal processing is completely handled by you. It is instant and there are no charges.",
-    },
-    {
-      question: "What do I need to get started?",
-      answer:
-        "Start the RealDeel AI onboarding process on Telegram. You will be guided through compatibility, setup requirements, and activation by our support.",
-    },
-  ];
-
-  return (
-    <main>
-      {/* NAVBAR */}
-      <nav className="navbar">
-        <a href="#" className="brand">
-          <span className="brand-mark">RD</span>
-          <span>ReaLDeeL <strong>AI</strong></span>
-        </a>
-
-        <a
-          href={TELEGRAM_URL}
-          target="_blank"
-          rel="noreferrer"
-          className="nav-button"
-        >
-          Try It Free
-        </a>
-      </nav>
-
-      {/* HERO */}
-      <section className="hero">
-        <div className="hero-content">
-          <div className="eyebrow">AUTOMATED TRADING TECHNOLOGY</div>
-
-          <h1>
-            LET AI HANDLE
-            <span> THE TRADING.</span>
-            <br />
-            YOU STAY IN CONTROL.
-          </h1>
-
-          <p className="hero-text">
-            Experience automated trade execution with the RealDeel AI trading
-            system. The bot follows its configured strategy while your trading
-            account remains yours.
-          </p>
-
-          <div className="hero-actions">
-            <a
-              href={TELEGRAM_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="primary-button"
-            >
-              🤖 TRY THE BOT FREE
-            </a>
-          </div>
-
-          <p className="small-note">
-            No subscription fee for using the bot. A compatible trading account
-            and server/VPS infrastructure may be required.
-          </p>
-        </div>
-
-        <div className="hero-visual">
-          <div className="glow"></div>
-
-          <div className="bot-card">
-            <div className="bot-status">
-              <span className="status-dot"></span>
-              AI SYSTEM ACTIVE
-            </div>
-
-            <div className="chart">
-              <div className="chart-grid"></div>
-
-              <div className="candles">
-                {[42, 68, 35, 82, 55, 92, 48, 76, 60, 96, 72, 110].map(
-                  (height, index) => (
-                    <span
-                      key={index}
-                      className={`candle ${index % 3 === 0 ? "down" : ""}`}
-                      style={{ height: `${height}px` }}
-                    ></span>
-                  )
-                )}
-              </div>
-
-              <div className="chart-line"></div>
-            </div>
-
-            <div className="bot-footer">
-              <div>
-                <small>MODE</small>
-                <strong>AUTOMATED</strong>
-              </div>
-              <div>
-                <small>EXECUTION</small>
-                <strong>AI MANAGED</strong>
-              </div>
-            </div>
-          </div>
-
-          <div className="floating-card card-one">
-            <span>🤖</span>
-            <div>
-              <small>TRADE EXECUTION</small>
-              <strong>Automated</strong>
-            </div>
-          </div>
-
-          <div className="floating-card card-two">
-            <span>🔐</span>
-            <div>
-              <small>ACCOUNT</small>
-              <strong>You Control It</strong>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* BENEFITS */}
-      <section className="section benefits">
-        <div className="section-heading">
-          <div className="eyebrow">WHY REALDEEL AI</div>
-          <h2> <p>AI EXECUTES.</p> <p> YOU REMAIN IN CONTROL.</p> </h2>
-          <p>
-            A structured automated approach designed to reduce manual execution
-            and emotional decision-making.
-          </p>
-        </div>
-
-        <div className="benefit-grid">
-          <article className="benefit-card">
-            <div className="icon">🤖</div>
-            <h3>Automated Execution</h3>
-            <p>
-              The system can execute trades automatically according to its
-              configured strategy.
-            </p>
-          </article>
-
-          <article className="benefit-card">
-            <div className="icon">🧠</div>
-            <h3>Rule-Based Decisions</h3>
-            <p>
-              The system follows programmed logic rather than fear, greed,
-              hesitation, or impulsive decisions.
-            </p>
-          </article>
-
-          <article className="benefit-card">
-            <div className="icon">🔐</div>
-            <h3>Your Account, Your Control</h3>
-            <p>
-              Your trading capital remains in your compatible trading account.
-            </p>
-          </article>
-
-          <article className="benefit-card">
-            <div className="icon">💸</div>
-            <h3>Access to Your Funds</h3>
-            <p>
-              You can manage your account and request withdrawals through your
-              broker, subject to applicable terms and processing procedures.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      {/* CONTROL SECTION */}
-      <section className="control-section">
-        <div className="control-content">
-          <div className="eyebrow light">AUTOMATION WITHOUT GIVING UP CONTROL</div>
-
-          <h2>YOUR FUNDS STAY IN YOUR TRADING ACCOUNT.</h2>
-
-          <p>
-            RealDeel AI is designed to automate trading activity. Your broker account remains separate, allowing only you to access
-            your balance and manage your account.
-          </p>
-
-          <div className="control-points">
-            <span>✓ Monitor your account</span>
-            <span>✓ Manage your balance</span>
-            <span>✓ Withdraw profits instantly!</span>
-          </div>
-
-          <a
-            href={TELEGRAM_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="gold-button"
-          >
-            START ON TELEGRAM →
-          </a>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="section faq-section">
-        <div className="section-heading">
-          <div className="eyebrow">QUESTIONS</div>
-          <h2>FREQUENTLY ASKED QUESTIONS</h2>
-        </div>
-
-        <div className="faq-list">
-          {faqs.map((faq, index) => (
-            <div
-              className={`faq-item ${openFaq === index ? "open" : ""}`}
-              key={faq.question}
-            >
-              <button
-                onClick={() =>
-                  setOpenFaq(openFaq === index ? null : index)
-                }
-              >
-                {faq.question}
-                <span>{openFaq === index ? "−" : "+"}</span>
-              </button>
-
-              {openFaq === index && <p>{faq.answer}</p>}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* FINAL CTA */}
-      <section className="final-cta">
-        <div className="eyebrow light">REALDEEL AI</div>
-
-        <h2>READY TO EXPLORE AUTOMATED TRADING?</h2>
-
-        <p>
-          Start your guided onboarding and learn what you need to get started.
-        </p>
-
-        <a
-          href={TELEGRAM_URL}
-          target="_blank"
-          rel="noreferrer"
-          className="primary-button"
-        >
-          🤖 TRY THE BOT FREE
-        </a>
-      </section>
-
-      {/* FOOTER */}
-      <footer>
-        <div className="footer-brand">
-          <span className="brand-mark">RD</span>
-          ReaLDeeL <strong>AI</strong>
-        </div>
-
-        <p>
-          Automated trading involves risk. Past or simulated performance does
-          not guarantee future results.
-        </p>
-
-        <p className="copyright">
-          © {new Date().getFullYear()} RealDeel AI. All rights reserved.
-        </p>
-      </footer>
-    </main>
-  );
-}
+export default function Home(){return <main className={styles.page}>
+  <section className={styles.hero}><div className={styles.heroBackdrop}/>
+    <header className={styles.header}><Link href="/" className={styles.logo}><span className={styles.logoMark}><img src="/realdeel-logo.JPG" alt="RealDeel logo" /></span><span>RealDeel<em>FX</em><small>AUTOMATE · TRADE · GROW</small></span></Link><nav><Link className={styles.active} href="/">Home</Link><div className={styles.servicesMenu}><a href="#services">Services <span>⌄</span></a><div className={styles.dropdown}>{services.map(s=><Link key={s.title} href={s.href}>{s.title}</Link>)}</div></div><Link href="/about">About</Link><Link href="/portfolio">Portfolio</Link><a href="#">Blog</a><Link href="/contact">Contact</Link></nav><Link href="/ai-trading-bot-free-usage" className={styles.outlineButton}>Get Started <span>→</span></Link></header>
+    <div className={styles.heroGrid}><div className={styles.heroCopy}><div className={styles.kicker}>SMART TOOLS. REAL TRADERS. BETTER RESULTS.</div><h1>TURN OPPORTUNITIES<br/><span>INTO RESULTS.</span></h1><p>Professional trading tools, automation and development services designed to help you trade, work and grow with confidence.</p><a href="#services" className={styles.solidButton}>Explore Our Services <span>→</span></a><div className={styles.trust}><span>▥ <b>Reliable Tools</b></span><span>♢ <b>Practical Solutions</b></span><span>♟ <b>Trader Focused</b></span></div></div><div className={styles.heroArt}><img src="/homepage-assets/hero-trading-v2.webp" alt="RealDeel automated trading workstation"/><i>Trade<br/>Work<br/>Automate<br/>Grow</i></div></div>
+  </section>
+  <section className={styles.services} id="services"><div className={styles.sectionIntro}><span>OUR SERVICES</span><h2>Everything You Need to Trade, Automate and Grow</h2><p>Choose the service that fits your goals and take the next step with RealDeel.</p></div><div className={styles.serviceGrid}>{services.map(s=><article key={s.title} className={`${styles.card} ${styles[s.tone]}`}><div className={styles.cardImage}><img src={s.image} alt=""/><b>{s.icon}</b></div><div className={styles.cardBody}><h3>{s.title}</h3><h4>{s.subtitle}</h4><p>{s.text}</p><ul>{s.points.map(p=><li key={p}>{p}</li>)}</ul><Link href={s.href}>{s.cta}<span>→</span></Link></div></article>)}</div></section>
+  <section className={styles.reviews}><div className={styles.reviewIntro}><span>CUSTOMER SATISFACTION</span><h2>Clients Adore Our Works, And You Will Too.</h2><p>Real feedback from our clients on Freelancer.com</p></div><div className={styles.reviewGrid}>{reviews.map(r=><article className={styles.review} key={r[1]}><div className={styles.reviewTop}><b>{r[0]}</b><div><strong>{r[2]} {r[1]}</strong><span>★★★★★ <small>5.0</small></span></div><div><strong>{r[3]}</strong><small>{r[4]}</small></div></div><p>“{r[5]}”</p><a href={r[6]} target="_blank" rel="noreferrer">View on Freelancer.com → ↗</a></article>)}</div><div className={styles.reviewFooter}><i>Trusted<br/>by Traders Worldwide</i><a href={profile} target="_blank" rel="noreferrer" className={styles.solidButton}>View More Reviews on Freelancer.com → ↗</a><i>Real People<br/>Real Results</i></div></section>
+  <SiteFooter />
+</main>}
