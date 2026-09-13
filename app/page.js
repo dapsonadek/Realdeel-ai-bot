@@ -1,20 +1,56 @@
 import Link from "next/link";
-import SiteHeader from "../components/SiteHeader";
-import SiteFooter from "../components/SiteFooter";
 
-const divisions = [
-  ["01", "Trading Automation", "AI trading bot, CopyTrader and trade-copying tools built around real trading workflows.", "/trading"],
-  ["02", "Trading Software Development", "Custom MT4/MT5, TradingView, NinjaTrader, TradeStation, cTrader and crypto solutions.", "/development"],
-  ["03", "AI Automation", "Practical AI workflows for creators, beginners and businesses.", "/ai-automation"],
+const internalLinks = [
+  ["/", "Home", "30.0%", "1.0%", "4.2%", "2.8%"],
+  ["/trading", "Services", "35.8%", "1.0%", "7.6%", "2.8%"],
+  ["/about", "About", "44.8%", "1.0%", "5.0%", "2.8%"],
+  ["/portfolio", "Portfolio", "50.3%", "1.0%", "6.0%", "2.8%"],
+  ["/blog", "Blog", "56.8%", "1.0%", "4.2%", "2.8%"],
+  ["/contact", "Contact", "62.1%", "1.0%", "5.8%", "2.8%"],
+  ["/ai-trading-bot-free-usage", "Get Started", "82.0%", "0.7%", "12.5%", "3.0%"],
+  ["/trading", "Explore Our Services", "5.5%", "16.4%", "19.5%", "3.2%"],
+  ["/ai-trading-bot-free-usage", "Use RealDeel AI Bot 100%", "3.5%", "28.8%", "30.4%", "22.7%"],
+  ["/copytrading", "Copy your Trades with RealDeel", "35.4%", "28.8%", "29.6%", "22.7%"],
+  ["/ai-trading-bot", "Buy RealDeel AI Bot", "66.3%", "28.8%", "30.3%", "22.7%"],
+  ["/trade-copier", "Buy our Copy Trading Software", "3.5%", "52.2%", "30.4%", "22.7%"],
+  ["/development", "Develop Your Trading Software", "35.4%", "52.2%", "29.6%", "22.7%"],
+  ["/ai-automation", "AI Automation for beginners", "66.3%", "52.2%", "30.3%", "22.7%"],
+];
+
+const reviewLinks = [
+  ["Peter review", "1.3%"],
+  ["Jay review", "17.8%"],
+  ["Joaquin review", "34.3%"],
+  ["Chen Chong review", "50.6%"],
+  ["Ifionu review", "66.8%"],
+  ["Oliver review", "83.0%"],
 ];
 
 export default function Home() {
-  return <><SiteHeader /><main>
-    <section className="home-hero"><div className="hero-copy"><div className="eyebrow">TRADING TECHNOLOGY • AUTOMATION • AI</div><h1>Build smarter.<br/><span>Trade smarter.</span></h1><p>RealDeel FX builds practical technology for traders, trading businesses and people looking to automate the way they work.</p><div className="hero-actions"><Link href="/ai-trading-bot-free-usage" className="primary-button">TRY REALDEEL AI FREE →</Link><Link href="/development" className="secondary-button">EXPLORE SERVICES</Link></div></div><div className="hero-panel"><div className="panel-top"><span>REALDEEL FX</span><span>01 / 03</span></div><div className="panel-title">AUTOMATION<br/><strong>IN MOTION.</strong></div><div className="panel-line"></div><p>Trading systems • Custom development • AI workflows</p></div></section>
-    <section className="section divisions"><div className="section-heading left"><div className="eyebrow">WHAT WE BUILD</div><h2>Technology across trading and AI.</h2></div><div className="division-grid">{divisions.map(([n,t,d,h])=><Link href={h} className="division-card" key={n}><span>{n}</span><h3>{t}</h3><p>{d}</p><b>Explore →</b></Link>)}</div></section>
-    <section className="feature-band"><div><div className="eyebrow light">FEATURED PRODUCT</div><h2>RealDeel AI Trading Bot</h2><p>Automated trade execution designed to reduce manual intervention while keeping the trading account in your control.</p><Link href="/ai-trading-bot-free-usage" className="gold-button">TRY THE BOT FREE →</Link></div><div className="feature-stat"><strong>AI</strong><span>Automated execution</span><strong>24/7</strong><span>Configured workflow</span></div></section>
-    <section className="section development-preview"><div className="section-heading left"><div className="eyebrow">CUSTOM DEVELOPMENT</div><h2>Have a trading strategy?<br/>Turn it into software.</h2><p>From indicators and Expert Advisors to trade copiers, strategies and crypto bots.</p></div><div className="platform-strip"><span>MT4 / MT5</span><span>TRADINGVIEW</span><span>NINJATRADER</span><span>TRADESTATION</span><span>CTRADER</span><span>CRYPTO</span></div><Link href="/development" className="text-link">View development services →</Link></section>
-    <section className="section story"><div><div className="eyebrow">THE REALDEEL APPROACH</div><h2>Developer. Trader. Builder.</h2></div><div><p>Years of software development and trading experience led to a simple idea: technology should make complex workflows easier to execute.</p><Link href="/about" className="text-link">Learn about RealDeel FX →</Link></div></section>
-    <section className="final-cta"><div className="eyebrow light">REALDEEL FX</div><h2>Ready to build or automate?</h2><p>Explore the products and services or start with the RealDeel AI Bot.</p><div className="hero-actions"><Link href="/ai-trading-bot-free-usage" className="primary-button">TRY AI BOT FREE</Link><Link href="/contact" className="secondary-button light-link">CONTACT REALDEEL</Link></div></section>
-  </main><SiteFooter /></>;
+  return (
+    <main className="approved-homepage">
+      <div className="approved-canvas">
+        <img src="/approved-homepage.webp" alt="RealDeel FX homepage showing trading automation services, six service cards and verified Freelancer.com client reviews." />
+        {internalLinks.map(([href,label,left,top,width,height]) => (
+          <Link key={label} href={href} aria-label={label} className="design-hotspot" style={{left,top,width,height}} />
+        ))}
+        {reviewLinks.map(([label,left], index) => (
+          <a
+            key={label}
+            href={index === 4
+              ? "https://www.freelancer.com/projects/c-programming/Engulfing-Candlestick-F/reviews"
+              : index === 5
+                ? "https://www.freelancer.com/projects/testing-qa/Trading-Strategy-coding-PineScript-for/reviews"
+                : "https://www.freelancer.com/u/dapsonadek"}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={label}
+            className="design-hotspot"
+            style={{left,top:"82.1%",width:"15.5%",height:"10.8%"}}
+          />
+        ))}
+        <a href="https://www.freelancer.com/u/dapsonadek" target="_blank" rel="noreferrer" aria-label="View more reviews on Freelancer.com" className="design-hotspot" style={{left:"36.3%",top:"94.3%",width:"27.3%",height:"3.2%"}} />
+      </div>
+    </main>
+  );
 }
