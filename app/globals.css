@@ -114,3 +114,16 @@
   .service-landing .portfolio-grid,.contact-link-grid{grid-template-columns:1fr}
   .contact-link-card{padding:23px}
 }
+
+
+/* Social platform marks on Contact */
+.contact-card-top{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.contact-platform-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:13px;color:#fff;box-shadow:0 8px 20px rgba(3,31,45,.13)}
+.contact-platform-icon svg{width:27px;height:27px;display:block;fill:currentColor}
+.contact-platform-icon.instagram svg{fill:none;stroke:currentColor;stroke-width:1.8}
+.contact-platform-icon.instagram .icon-fill{fill:currentColor;stroke:none}
+.contact-platform-icon.whatsapp{background:#25d366}
+.contact-platform-icon.telegram{background:#229ed9}
+.contact-platform-icon.instagram{background:linear-gradient(135deg,#833ab4,#fd1d1d 58%,#fcb045)}
+.contact-platform-icon.facebook{background:#1877f2}
+@media(max-width:700px){.contact-platform-icon{width:44px;height:44px}.contact-platform-icon svg{width:25px;height:25px}}
