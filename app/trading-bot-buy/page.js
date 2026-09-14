@@ -1,7 +1,7 @@
 import SiteHeader from "../../components/SiteHeader";
 import ServiceLandingFooter from "../../components/ServiceLandingFooter";
 
-const WHATSAPP_URL = "https://wa.me/2349124688089?text=Hello%20RealDeel%2C%20I%20want%20to%20buy%20the%20RealDeel%20Trading%20Bot.";
+const WHATSAPP_URL = "https://wa.me/2349124688089?text=Hi%2C%20I%27m%20interested%20in%20purchasing%20the%20RealDeel%20AI%20Trading%20Bot%21";
 
 const features = [
   ["Trades Gold (XAUUSD)", "Built specifically to analyze and trade Gold on the XAUUSD market."],

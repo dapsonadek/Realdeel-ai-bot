@@ -1,7 +1,7 @@
 import SiteHeader from "../../components/SiteHeader";
 import ServiceLandingFooter from "../../components/ServiceLandingFooter";
 
-const WHATSAPP_URL = "https://wa.me/2349124688089?text=Hello%20RealDeel%2C%20I%20want%20to%20get%20the%20RealDeel%20Trade-Copier.";
+const WHATSAPP_URL = "https://wa.me/2349124688089?text=Hi%2C%20I%27m%20interested%20in%20purchasing%20the%20Trade-copier%21";
 
 export default function TradeCopierBuy() {
   return (
