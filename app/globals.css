@@ -20,3 +20,77 @@
 .service-page .site-header{background:#021725;border-color:rgba(5,235,210,.15)}.service-page .site-brand{color:#fff}.service-page .site-brand b,.service-page .main-nav a:hover{color:#05ebd2}.service-page .main-nav a{color:#b5c5cd}.service-page .nav-cta{background:#05ebd2;color:#03202d;border-radius:24px}.service-landing .page-hero{position:relative;max-width:none;min-height:410px;margin:0;background:#021725;color:#fff;overflow:hidden}.service-landing .page-hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 50%,rgba(5,235,210,.14),transparent 30%)}.service-landing .page-hero:after{content:"";position:absolute;right:7%;top:50%;transform:translateY(-50%);width:39%;height:64%;border-radius:20px;background-position:center;background-size:cover;background-repeat:no-repeat;box-shadow:0 24px 60px rgba(0,0,0,.3);border:1px solid rgba(5,235,210,.22)}.service-landing .page-hero>*{position:relative;z-index:2;max-width:50%}.service-landing .page-hero h1{color:#fff}.service-landing .page-hero h1 span,.service-landing .page-hero .eyebrow{color:#05ebd2}.service-landing .page-hero>p{color:#b9c9d1}.service-landing .page-hero .primary-button{background:#05ebd2;color:#03202d;border-radius:26px}.copytrading-landing .page-hero:after{background-image:url("/homepage-assets/copy-trading-v3.webp")}.personal-bot-landing .page-hero:after{background-image:url("/homepage-assets/personal-bot-v3.webp")}.trade-copier-landing .page-hero:after{background-image:url("/homepage-assets/trade-copier-v3.webp")}.development-landing .page-hero:after{background-image:url("/homepage-assets/development-v3.webp")}.ai-automation-landing .page-hero:after{background-image:url("/homepage-assets/ai-automation-v3.webp")}
 @media(max-width:900px){.service-landing .page-hero{min-height:390px}.service-landing .page-hero:after{right:5%;width:40%;height:55%}.service-landing .page-hero>*{max-width:52%}}
 @media(max-width:700px){.service-landing .page-hero{padding-bottom:270px;text-align:center}.service-landing .page-hero>*{max-width:100%}.service-landing .page-hero:after{width:min(88%,520px);height:210px;right:50%;top:auto;bottom:38px;transform:translateX(50%)}.service-landing .page-hero>p{margin-left:auto;margin-right:auto}.service-page .site-brand{font-size:15px}.service-page .brand-logo{width:42px;height:42px}}
+
+
+/* Complete AI-bot-compatible layout for the five service landing pages */
+.service-page{--service-aqua:#05ebd2;--service-navy:#021725;--service-panel:#062637;--service-line:#164457;--service-muted:#687b87;background:#fff;min-height:100vh;overflow-x:hidden}
+.service-page .site-header{height:70px;background:var(--service-navy);border-bottom:1px solid rgba(5,235,210,.15)}
+.service-page .nav-wrap{width:min(1080px,88%);gap:28px}
+.service-page .site-brand{color:#fff}
+.service-page .site-brand b{color:var(--service-aqua)}
+.service-page .main-nav{gap:22px}
+.service-page .main-nav a{color:#c0ced5}
+.service-page .main-nav a:hover{color:var(--service-aqua)}
+.service-page .nav-cta{background:var(--service-aqua);color:#03202d;border-radius:28px;padding:12px 20px}
+.service-landing .page-hero{box-sizing:border-box;width:100%;min-height:510px;padding:72px max(6%,calc((100% - 1080px)/2));display:flex;flex-direction:column;justify-content:center}
+.service-landing .page-hero>*{max-width:49%}
+.service-landing .page-hero>div{width:49%;max-width:540px}
+.service-landing .page-hero>div>*{max-width:100%}
+.service-landing .page-hero:after{right:max(6%,calc((100% - 1080px)/2));width:min(47%,520px);height:350px;border-radius:22px}
+.service-landing .page-hero .eyebrow{font-size:11px;letter-spacing:1.5px;margin-bottom:18px}
+.service-landing .page-hero .eyebrow:before{content:"";display:inline-block;width:38px;height:2px;background:var(--service-aqua);margin:0 10px 3px 0}
+.service-landing .page-hero h1{font-size:clamp(38px,4.6vw,60px);line-height:1;letter-spacing:-2px;margin-bottom:18px}
+.service-landing .page-hero>p,.service-landing .page-hero>div>p{max-width:540px;color:#c0ced5;font-size:16px;line-height:1.5;margin-bottom:22px}
+.service-landing .section{width:min(1080px,86%);max-width:none;padding:68px 0;margin:auto}
+.service-landing .section:nth-of-type(even){background:#f6f9fa}
+.service-landing .section-heading{max-width:650px;margin:0 auto 34px;text-align:center}
+.service-landing .section-heading.left{margin-left:0;text-align:left}
+.service-landing .section-heading h2,.service-landing .split-section h2,.service-landing .dark-band h2{font-size:clamp(29px,3.3vw,42px);line-height:1.02;letter-spacing:-1.7px}
+.service-landing .product-grid,.service-landing .platform-grid{gap:18px}
+.service-landing .product-card,.service-landing .platform-card{padding:23px;border:1px solid #e2eaed;border-radius:15px;box-shadow:0 10px 28px rgba(3,31,45,.05)}
+.service-landing .product-card h3,.service-landing .platform-card h3{font-size:18px;margin:20px 0 10px}
+.service-landing .product-card p,.service-landing .platform-card p{color:var(--service-muted);font-size:14px;line-height:1.6}
+.service-landing .split-section{width:min(1080px,86%);max-width:none;padding:68px 0;gap:60px}
+.service-landing .dark-band{padding:64px max(7%,calc((100% - 1080px)/2));background:#031b2b;grid-template-columns:minmax(0,760px);gap:0}
+.service-landing .dark-band p{color:#b7c7cf;font-size:16px;line-height:1.7}
+.service-landing-footer{padding:34px 5%;background:#02121d;color:#fff;text-align:center}
+.service-footer-cta{max-width:760px;margin:0 auto 30px;padding:20px 24px;border:1px solid rgba(5,235,210,.24);border-radius:14px;background:#062536;display:flex;align-items:center;justify-content:space-between;gap:20px;text-align:left}
+.service-footer-cta>span{color:#9eb2bc;font-size:12px}
+.service-footer-cta>a{display:inline-flex;align-items:center;justify-content:center;gap:18px;padding:11px 18px;border-radius:24px;background:var(--service-aqua);color:#03202d;font-size:12px;font-weight:900;white-space:nowrap}
+.service-footer-cta>a:hover{transform:translateY(-2px)}
+.service-footer-brand{display:flex;align-items:center;justify-content:center;gap:9px;width:max-content;margin:0 auto 20px;font-size:20px;font-weight:800;line-height:1}
+.service-footer-brand em{font-size:12px;color:var(--service-aqua);font-style:normal;margin-left:3px}
+.service-footer-brand small{display:block;color:var(--service-aqua);font-size:7px;letter-spacing:1.5px;margin-top:5px}
+.service-footer-logo{display:block;width:40px;height:40px;overflow:hidden;border-radius:8px;background:#fff;position:relative;flex:none}
+.service-footer-logo img{position:absolute;width:91px;height:91px;max-width:none;left:-25px;top:-14px}
+.service-landing-footer p{max-width:700px;margin:8px auto;color:#8398a3;font-size:11px;line-height:1.6}
+@media(max-width:900px){
+  .service-page .nav-wrap{width:min(680px,90%)}
+  .service-landing .page-hero{min-height:460px;padding:60px 6%}
+  .service-landing .page-hero:after{right:5%;width:42%;height:310px}
+  .service-landing .page-hero>*,.service-landing .page-hero>div{max-width:50%;width:50%}
+  .service-landing .section,.service-landing .split-section{width:min(680px,86%);padding:58px 0}
+  .service-landing .split-section{gap:32px}
+  .service-landing .dark-band{padding:58px 7%}
+}
+@media(max-width:700px){
+  .service-page .site-header{height:70px}
+  .service-page .nav-wrap{width:90%}
+  .service-page .site-brand{font-size:15px}
+  .service-page .brand-logo{width:40px;height:40px}
+  .service-landing .page-hero{min-height:0;padding:48px 6% 286px;text-align:center}
+  .service-landing .page-hero>*,.service-landing .page-hero>div{max-width:100%;width:100%}
+  .service-landing .page-hero .eyebrow:before{display:none}
+  .service-landing .page-hero h1{font-size:34px;letter-spacing:-1.5px}
+  .service-landing .page-hero>p,.service-landing .page-hero>div>p{font-size:15px;margin-left:auto;margin-right:auto}
+  .service-landing .page-hero:after{width:min(88%,520px);height:220px;right:50%;top:auto;bottom:38px;transform:translateX(50%)}
+  .service-landing .section,.service-landing .split-section{width:88%;padding:50px 0}
+  .service-landing .section-heading{margin-bottom:28px}
+  .service-landing .section-heading.left{text-align:center}
+  .service-landing .section-heading h2,.service-landing .split-section h2,.service-landing .dark-band h2{font-size:28px}
+  .service-landing .product-grid,.service-landing .platform-grid{grid-template-columns:1fr}
+  .service-landing .dark-band{padding:50px 7%;text-align:center}
+  .service-landing-footer{padding:28px 5%}
+  .service-footer-cta{margin-bottom:26px;padding:18px;flex-direction:column;text-align:center}
+  .service-footer-cta>a{width:100%;max-width:340px}
+}

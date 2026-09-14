@@ -1,7 +1,6 @@
 import Link from "next/link";
 import SiteHeader from "../../components/SiteHeader";
-import SiteFooter from "../../components/SiteFooter";
-import OtherServicesCta from "../../components/OtherServicesCta";
+import ServiceLandingFooter from "../../components/ServiceLandingFooter";
 
 const products = [
   ["AI Trading Bot", "Automated trade execution built around a configured trading strategy.", "/ai-trading-bot-free-usage", "Explore the free onboarding"],
@@ -38,9 +37,9 @@ export default function Trading() {
       <p>Your trading account remains yours. Our technology is designed to automate execution while keeping you in control of your account and decisions.</p>
       </div>
     </section>
-  <OtherServicesCta />
+  
   </main>
-  <SiteFooter /></div>;
+  <ServiceLandingFooter /></div>;
 }
 
 
