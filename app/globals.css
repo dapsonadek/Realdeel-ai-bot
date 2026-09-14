@@ -94,3 +94,23 @@
   .service-footer-cta{margin-bottom:26px;padding:18px;flex-direction:column;text-align:center}
   .service-footer-cta>a{width:100%;max-width:340px}
 }
+
+
+/* Compact company-page layouts */
+.about-landing .page-hero:after{background-image:url("/homepage-assets/hero-trading-v2.webp")}
+.portfolio-landing .page-hero:after{background-image:url("/homepage-assets/development-v3.webp")}
+.contact-landing .page-hero:after{background-image:url("/homepage-assets/ai-automation-v3.webp")}
+.service-landing .portfolio-grid{gap:18px}
+.service-landing .portfolio-card{padding:23px;border:1px solid #e2eaed;border-radius:15px;box-shadow:0 10px 28px rgba(3,31,45,.05)}
+.service-landing .portfolio-card h3{font-size:18px;margin:20px 0 10px}
+.service-landing .portfolio-card p{color:var(--service-muted);font-size:14px;line-height:1.6}
+.contact-link-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.contact-link-card{padding:25px;border:1px solid #e2eaed;border-radius:15px;background:#fff;box-shadow:0 10px 28px rgba(3,31,45,.05);transition:.2s}
+.contact-link-card:hover{transform:translateY(-4px);box-shadow:0 15px 40px rgba(3,31,45,.09)}
+.contact-link-card h3{color:var(--service-navy);font-size:20px;margin:20px 0 10px}
+.contact-link-card p{color:var(--service-muted);font-size:14px;line-height:1.6}
+.service-landing .dark-band .primary-button{margin-top:14px;background:var(--service-aqua);color:#03202d;border-radius:26px}
+@media(max-width:700px){
+  .service-landing .portfolio-grid,.contact-link-grid{grid-template-columns:1fr}
+  .contact-link-card{padding:23px}
+}
