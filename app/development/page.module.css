@@ -1,12 +1,12 @@
 .marketNote{font-size:13px!important;color:#95e9de!important;letter-spacing:.015em;margin:0 0 18px!important}
 .heroActions{display:flex;align-items:center;flex-wrap:wrap;gap:16px 24px;position:relative;z-index:2;max-width:50%}
-.heroActions .primary-button{margin-top:0}
+.heroActions :global(.primary-button){margin-top:0}
 .heroLink{color:#d2e8e9;font-size:13px;font-weight:750;text-decoration:underline;text-underline-offset:4px}
 .heroLink:hover{color:#05ebd2}
 .reviews{background:#052331;color:#fff;padding:62px 0 58px;border-top:1px solid rgba(5,235,210,.14)}
 .reviewsInner{width:min(1080px,86%);margin:auto}
 .reviewHeading{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:28px}
-.reviewHeading .eyebrow{color:#05ebd2;margin-bottom:12px}
+.reviewHeading :global(.eyebrow){color:#05ebd2;margin-bottom:12px}
 .reviewHeading h2{font-size:clamp(30px,3.4vw,43px);line-height:1.1;letter-spacing:-1.5px;margin:0 0 10px;color:#fff}
 .reviewHeading p{font-size:15px;color:#afc3cd;line-height:1.55;margin:0}
 .profileLink{font-size:13px;font-weight:800;color:#05ebd2;white-space:nowrap;padding-bottom:5px}
