@@ -67,7 +67,7 @@ export default function Development() {
           <div className="eyebrow">CUSTOM TRADING SOFTWARE DEVELOPMENT</div>
           <h1>Have a strategy?<br /><span>Turn it into software.</span></h1>
           <p>Custom Indicators, Expert Advisors, Trading Strategies, Trade-copiers and Crypto Bots built around your specifications.</p>
-          <p className={styles.marketNote}>For traders, firms and trading communities in the US, UAE, UK and beyond.</p>
+          <p className={styles.marketNote}>For traders, firms and trading communities worldwide.</p>
           <div className={styles.heroActions}>
             <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="primary-button">Discuss Your Project →</a>
             <a href={FREELANCER_URL} target="_blank" rel="noreferrer" className={styles.heroLink}>See our work on Freelancer ↗</a>
@@ -88,7 +88,7 @@ export default function Development() {
               {reviews.map((review) => (
                 <article className={styles.reviewCard} key={review.name}>
                   <span className={styles.reviewProject}>{review.project}</span>
-                  <p className={styles.reviewQuote}>“{review.quote}”</p>
+                  <p className={styles.reviewQuote}>{review.quote}</p>
                   <div className={styles.reviewBottom}>
                     <strong>{review.name}</strong>
                     <a href={review.url} target="_blank" rel="noreferrer" aria-label={`View ${review.name}'s project on Freelancer`}>View project ↗</a>
