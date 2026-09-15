@@ -1,5 +1,6 @@
 import SiteHeader from "../../components/SiteHeader";
 import ServiceLandingFooter from "../../components/ServiceLandingFooter";
+import styles from "./page.module.css";
 
 const WHATSAPP_URL = "https://wa.me/2349124688089?text=Hi%2C%20I%27m%20interested%20in%20the%20copytrading%20service%21";
 
@@ -14,7 +15,7 @@ const advantages = [
 
 export default function CopyTrading() {
   return (
-    <div className="service-page">
+    <div className={`service-page ${styles.page}`}>
       <SiteHeader />
       <main className="service-landing copytrading-landing">
         <section className="page-hero">
@@ -38,6 +39,21 @@ export default function CopyTrading() {
                 <p>{text}</p>
               </article>
             ))}
+          </div>
+        </section>
+
+        <section className={styles.videoSection} aria-labelledby="copytrading-video-title">
+          <div className={styles.videoFrame}>
+            <video autoPlay muted controls playsInline preload="metadata" aria-label="RealDeel CopyTrading demonstration">
+              <source src="/realdeel-copytrading.mp4" type="video/mp4" />
+              Your browser does not support video playback.
+            </video>
+          </div>
+          <div className={styles.videoContent}>
+            <div className="eyebrow">SEE COPYTRADING IN ACTION</div>
+            <h2 id="copytrading-video-title">Copy trades, not signals.</h2>
+            <p>See how a connected trading account follows a pro trader’s actions automatically, without waiting for a signal or entering trades manually.</p>
+            <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="primary-button">Ask About CopyTrading →</a>
           </div>
         </section>
 
