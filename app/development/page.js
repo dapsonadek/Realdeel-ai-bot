@@ -76,7 +76,7 @@ export default function Development() {
           <p className={styles.marketNote}>For traders, firms and trading communities worldwide.</p>
           <div className={styles.heroActions}>
             <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="primary-button">Discuss Your Project →</a>
-            <a href={FREELANCER_URL} target="_blank" rel="noreferrer" className={styles.heroLink}>See our work on Freelancer ↗</a>
+            <a href={FREELANCER_URL} target="_blank" rel="noreferrer" className={styles.heroLink}>See our Portfolio on Freelancer.com</a>
           </div>
         </section>
 
@@ -88,7 +88,7 @@ export default function Development() {
                 <h2 id="development-reviews-heading">See what development clients say.</h2>
                 <p>Explore feedback from real software-development projects before starting yours.</p>
               </div>
-              <a href={FREELANCER_URL} target="_blank" rel="noreferrer" className={styles.profileLink}>View reviews & portfolio on Freelancer ↗</a>
+              <a href={FREELANCER_URL} target="_blank" rel="noreferrer" className={styles.profileLink}>View full reviews on Global Marketplace - Freelancer.com</a>
             </div>
             <div className={styles.reviewGrid}>
               {reviews.map((review) => (
