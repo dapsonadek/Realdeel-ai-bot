@@ -17,36 +17,42 @@ const platforms = [
 const reviews = [
   {
     name: "Peter",
+    flag: "🇦🇺",
     project: "MT4 indicator development",
     quote: "Developer did a great job, we worked through an issue with the development scope sensibly and I got what I wanted quickly and with minimal fuss.",
     url: "https://www.freelancer.com/projects/mql4/Custom-Time-Grid-Indicator/details",
   },
   {
     name: "Jay",
+    flag: "🇺🇸",
     project: "NinjaTrader strategy",
     quote: "Great work! Eniola O. really knows what she is doing and is very responsive with any question or concerns about anything, I highly recommend.",
     url: "https://www.freelancer.com/projects/backtesting/SMA-EMA-Based-NinjaTrader-Scaling/details",
   },
   {
     name: "Joaquin",
+    flag: "🇦🇷",
     project: "MT4 / MT5 trading development",
     quote: "At the beginning of work cost to understand each other, but in the end we could speak and coordinate perfectly. Professional, recommended.",
     url: "https://www.freelancer.com/projects/mql4/Trading-Development/details",
   },
   {
     name: "Chen Chong",
+    flag: "🇲🇾",
     project: "Trading script conversion",
     quote: "Eniola has successfully completed my 2nd project. Her work ethics are excellent and her technical expertise is remarkable. Highly recommend.",
     url: "https://www.freelancer.com/projects/software-architecture/Convert-script-39507717/details",
   },
   {
     name: "Ifionu",
+    flag: "🇳🇬",
     project: "Forex bot development",
     quote: "Great developer. Delivered exactly what I needed. Communication was smooth and the project was completed successfully. I highly recommend.",
     url: "https://www.freelancer.com/projects/c-programming/Engulfing-Candlestick-Forex-Bot/details",
   },
   {
     name: "Oliver",
+    flag: "🇧🇬",
     project: "Pine Script strategy",
     quote: "Great experience! Delivered high-quality work, understood the requirements clearly, and was very responsive throughout the project. Highly recommend.",
     url: "https://www.freelancer.com/projects/testing-qa/Trading-Strategy-coding-PineScript-for/details",
@@ -63,7 +69,7 @@ export default function Development() {
     <div className="service-page">
       <SiteHeader />
       <main className="service-landing development-landing">
-        <section className="page-hero">
+        <section className={`page-hero ${styles.hero}`}>
           <div className="eyebrow">CUSTOM TRADING SOFTWARE DEVELOPMENT</div>
           <h1>Have a strategy?<br /><span>Turn it into software.</span></h1>
           <p>Custom Indicators, Expert Advisors, Trading Strategies, Trade-copiers and Crypto Bots built around your specifications.</p>
@@ -90,7 +96,7 @@ export default function Development() {
                   <span className={styles.reviewProject}>{review.project}</span>
                   <p className={styles.reviewQuote}>{review.quote}</p>
                   <div className={styles.reviewBottom}>
-                    <strong>{review.name}</strong>
+                    <strong><span className={styles.flag} aria-label="Country flag">{review.flag}</span> {review.name}</strong>
                     <a href={review.url} target="_blank" rel="noreferrer" aria-label={`View ${review.name}'s project on Freelancer`}>View project ↗</a>
                   </div>
                 </article>
@@ -103,23 +109,26 @@ export default function Development() {
           </div>
         </section>
 
-        <section className="section">
+        <div className={styles.platformTheme}>
+          <section className="section">
           <div className="section-heading left">
             <div className="eyebrow">PLATFORMS</div>
             <h2>Development across the tools traders already use.</h2>
           </div>
           <div className="platform-grid">
             {platforms.map(([platform, description], index) => (
-              <article className="platform-card" key={platform}>
+              <article className={`platform-card ${styles.platformCard}`} key={platform}>
                 <span>0{index + 1}</span>
                 <h3>{platform}</h3>
                 <p>{description}</p>
               </article>
             ))}
           </div>
-        </section>
+          </section>
+        </div>
 
-        <section className="split-section">
+        <div className={styles.ideaTheme}>
+          <section className="split-section">
           <div>
             <div className="eyebrow">FROM IDEA TO EXECUTION</div>
             <h2>Bring the rules. We build the technology.</h2>
@@ -129,7 +138,8 @@ export default function Development() {
             <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="primary-button">Discuss Your Project →</a>
             <div><a href={FREELANCER_URL} target="_blank" rel="noreferrer" className="text-link">See development portfolio →</a></div>
           </div>
-        </section>
+          </section>
+        </div>
       </main>
       <ServiceLandingFooter />
     </div>

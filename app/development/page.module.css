@@ -23,3 +23,24 @@
 .reviewCta a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 20px;border-radius:24px;background:#062637;color:#fff;font-weight:800;font-size:13px;white-space:nowrap}
 @media(max-width:900px){.reviewGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.reviewHeading{align-items:start;flex-direction:column;gap:15px}.heroActions{max-width:50%}}
 @media(max-width:700px){.heroActions{max-width:100%;width:100%;justify-content:center;flex-direction:column;gap:13px}.marketNote{text-align:center}.reviews{padding:48px 0}.reviewsInner{width:88%}.reviewGrid{grid-template-columns:1fr}.reviewCard{padding:20px}.reviewHeading h2{font-size:28px}.profileLink{white-space:normal}.reviewCta{flex-direction:column;text-align:center}.reviewCta a{width:100%;max-width:340px}}
+
+/* Development-only continuity with the Trading Bot's dark approach band. */
+:global(.development-landing) .hero:after{background-size:contain;background-color:#07283a;background-position:center}
+.flag{font-size:19px;line-height:1;vertical-align:-2px;margin-right:5px}
+.platformTheme,.ideaTheme{background:#031b2b;color:#fff}
+.platformTheme{border-top:1px solid rgba(5,235,210,.14)}
+.ideaTheme{border-top:1px solid rgba(5,235,210,.16);background:#052334}
+.platformTheme :global(.section),.ideaTheme :global(.split-section){box-sizing:border-box;width:min(1080px,86%);max-width:none;margin:auto;padding:64px 0}
+.platformTheme :global(.section-heading){max-width:700px}
+.platformTheme :global(.eyebrow),.ideaTheme :global(.eyebrow){color:#05ebd2}
+.platformTheme :global(.section-heading) h2,.ideaTheme :global(.split-section) h2{color:#fff}
+.ideaTheme :global(.split-section) p{color:#bbced4;font-size:16px;line-height:1.65}
+.ideaTheme :global(.split-section) :global(.primary-button){background:#05ebd2;color:#03202d;border-radius:26px}
+.ideaTheme :global(.text-link){color:#05ebd2}
+.platformTheme .platformCard{background:#0b3041;border:1px solid #245369;box-shadow:none;min-height:190px}
+.platformTheme .platformCard:hover{box-shadow:0 14px 32px rgba(0,0,0,.2)}
+.platformTheme .platformCard>span{color:#05ebd2}
+.platformTheme .platformCard h3{color:#fff}
+.platformTheme .platformCard p{color:#b8ced5}
+@media(max-width:900px){.platformTheme :global(.section),.ideaTheme :global(.split-section){width:min(680px,86%);padding:58px 0}}
+@media(max-width:700px){.platformTheme :global(.section),.ideaTheme :global(.split-section){width:88%;padding:50px 0}.platformTheme .platformCard{min-height:0}}
