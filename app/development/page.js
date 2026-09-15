@@ -1,5 +1,6 @@
 import SiteHeader from "../../components/SiteHeader";
 import ServiceLandingFooter from "../../components/ServiceLandingFooter";
+import styles from "./page.module.css";
 
 const WHATSAPP_URL = "https://wa.me/2349124688089?text=Hi%2C%20I%27m%20interested%20in%20the%20trading%20development%20service%21";
 const FREELANCER_URL = "https://www.freelancer.com/u/sdqtrades";
@@ -13,16 +14,93 @@ const platforms = [
   ["Crypto Bots / APIs", "Bybit, Binance, Coinbase and 3Commas crypto trading bots."],
 ];
 
+const reviews = [
+  {
+    name: "Peter",
+    project: "MT4 indicator development",
+    quote: "Developer did a great job, we worked through an issue with the development scope sensibly and I got what I wanted quickly and with minimal fuss.",
+    url: "https://www.freelancer.com/projects/mql4/Custom-Time-Grid-Indicator/details",
+  },
+  {
+    name: "Jay",
+    project: "NinjaTrader strategy",
+    quote: "Great work! Eniola O. really knows what she is doing and is very responsive with any question or concerns about anything, I highly recommend.",
+    url: "https://www.freelancer.com/projects/backtesting/SMA-EMA-Based-NinjaTrader-Scaling/details",
+  },
+  {
+    name: "Joaquin",
+    project: "MT4 / MT5 trading development",
+    quote: "At the beginning of work cost to understand each other, but in the end we could speak and coordinate perfectly. Professional, recommended.",
+    url: "https://www.freelancer.com/projects/mql4/Trading-Development/details",
+  },
+  {
+    name: "Chen Chong",
+    project: "Trading script conversion",
+    quote: "Eniola has successfully completed my 2nd project. Her work ethics are excellent and her technical expertise is remarkable. Highly recommend.",
+    url: "https://www.freelancer.com/projects/software-architecture/Convert-script-39507717/details",
+  },
+  {
+    name: "Ifionu",
+    project: "Forex bot development",
+    quote: "Great developer. Delivered exactly what I needed. Communication was smooth and the project was completed successfully. I highly recommend.",
+    url: "https://www.freelancer.com/projects/c-programming/Engulfing-Candlestick-Forex-Bot/details",
+  },
+  {
+    name: "Oliver",
+    project: "Pine Script strategy",
+    quote: "Great experience! Delivered high-quality work, understood the requirements clearly, and was very responsive throughout the project. Highly recommend.",
+    url: "https://www.freelancer.com/projects/testing-qa/Trading-Strategy-coding-PineScript-for/details",
+  },
+];
+
+export const metadata = {
+  title: "Custom Trading Software Development | RealDeel FX",
+  description: "Commission custom MT4/MT5 Expert Advisors, TradingView Pine Script, NinjaTrader strategies, trade copiers and crypto bots. Explore client reviews and discuss your project.",
+};
+
 export default function Development() {
   return (
     <div className="service-page">
       <SiteHeader />
       <main className="service-landing development-landing">
         <section className="page-hero">
-          <div className="eyebrow">TRADING SOFTWARE DEVELOPMENT</div>
+          <div className="eyebrow">CUSTOM TRADING SOFTWARE DEVELOPMENT</div>
           <h1>Have a strategy?<br /><span>Turn it into software.</span></h1>
           <p>Custom Indicators, Expert Advisors, Trading Strategies, Trade-copiers and Crypto Bots built around your specifications.</p>
-          <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="primary-button">Discuss Your Project →</a>
+          <p className={styles.marketNote}>For traders, firms and trading communities in the US, UAE, UK and beyond.</p>
+          <div className={styles.heroActions}>
+            <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="primary-button">Discuss Your Project →</a>
+            <a href={FREELANCER_URL} target="_blank" rel="noreferrer" className={styles.heroLink}>See our work on Freelancer ↗</a>
+          </div>
+        </section>
+
+        <section className={styles.reviews} aria-labelledby="development-reviews-heading">
+          <div className={styles.reviewsInner}>
+            <div className={styles.reviewHeading}>
+              <div>
+                <div className="eyebrow">CLIENT PROJECTS & FEEDBACK</div>
+                <h2 id="development-reviews-heading">See what development clients say.</h2>
+                <p>Explore feedback from real software-development projects before starting yours.</p>
+              </div>
+              <a href={FREELANCER_URL} target="_blank" rel="noreferrer" className={styles.profileLink}>View reviews & portfolio on Freelancer ↗</a>
+            </div>
+            <div className={styles.reviewGrid}>
+              {reviews.map((review) => (
+                <article className={styles.reviewCard} key={review.name}>
+                  <span className={styles.reviewProject}>{review.project}</span>
+                  <p className={styles.reviewQuote}>“{review.quote}”</p>
+                  <div className={styles.reviewBottom}>
+                    <strong>{review.name}</strong>
+                    <a href={review.url} target="_blank" rel="noreferrer" aria-label={`View ${review.name}'s project on Freelancer`}>View project ↗</a>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <div className={styles.reviewCta}>
+              <span>Have a strategy or a technical brief ready?</span>
+              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">Discuss Your Project →</a>
+            </div>
+          </div>
         </section>
 
         <section className="section">
@@ -48,7 +126,8 @@ export default function Development() {
           </div>
           <div>
             <p>Whether you have a complete strategy or only a trading concept, we can translate defined rules into a practical automated tool.</p>
-            <a href={FREELANCER_URL} target="_blank" rel="noreferrer" className="text-link">See development portfolio →</a>
+            <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="primary-button">Discuss Your Project →</a>
+            <div><a href={FREELANCER_URL} target="_blank" rel="noreferrer" className="text-link">See development portfolio →</a></div>
           </div>
         </section>
       </main>

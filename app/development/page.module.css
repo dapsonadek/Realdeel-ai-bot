@@ -1,0 +1,25 @@
+.marketNote{font-size:13px!important;color:#95e9de!important;letter-spacing:.015em;margin:0 0 18px!important}
+.heroActions{display:flex;align-items:center;flex-wrap:wrap;gap:16px 24px;position:relative;z-index:2;max-width:50%}
+.heroActions .primary-button{margin-top:0}
+.heroLink{color:#d2e8e9;font-size:13px;font-weight:750;text-decoration:underline;text-underline-offset:4px}
+.heroLink:hover{color:#05ebd2}
+.reviews{background:#052331;color:#fff;padding:62px 0 58px;border-top:1px solid rgba(5,235,210,.14)}
+.reviewsInner{width:min(1080px,86%);margin:auto}
+.reviewHeading{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:28px}
+.reviewHeading .eyebrow{color:#05ebd2;margin-bottom:12px}
+.reviewHeading h2{font-size:clamp(30px,3.4vw,43px);line-height:1.1;letter-spacing:-1.5px;margin:0 0 10px;color:#fff}
+.reviewHeading p{font-size:15px;color:#afc3cd;line-height:1.55;margin:0}
+.profileLink{font-size:13px;font-weight:800;color:#05ebd2;white-space:nowrap;padding-bottom:5px}
+.profileLink:hover{text-decoration:underline}
+.reviewGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.reviewCard{display:flex;flex-direction:column;min-width:0;padding:22px;border:1px solid #205266;border-radius:14px;background:#0b3041}
+.reviewProject{color:#05ebd2;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.reviewQuote{color:#e0e9ed;font-size:14px;line-height:1.65;flex:1;margin:17px 0 22px}
+.reviewBottom{display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid #245366;padding-top:14px}
+.reviewBottom strong{color:#fff;font-size:13px}
+.reviewBottom a{color:#05ebd2;font-size:12px;font-weight:800}
+.reviewBottom a:hover{text-decoration:underline}
+.reviewCta{display:flex;justify-content:space-between;align-items:center;gap:18px;margin-top:21px;font-size:14px;color:#cadce3}
+.reviewCta a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 20px;border-radius:24px;background:#05ebd2;color:#03202d;font-weight:800;font-size:13px;white-space:nowrap}
+@media(max-width:900px){.reviewGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.reviewHeading{align-items:start;flex-direction:column;gap:15px}.heroActions{max-width:50%}}
+@media(max-width:700px){.heroActions{max-width:100%;width:100%;justify-content:center;flex-direction:column;gap:13px}.marketNote{text-align:center}.reviews{padding:48px 0}.reviewsInner{width:88%}.reviewGrid{grid-template-columns:1fr}.reviewCard{padding:20px}.reviewHeading h2{font-size:28px}.profileLink{white-space:normal}.reviewCta{flex-direction:column;text-align:center}.reviewCta a{width:100%;max-width:340px}}
