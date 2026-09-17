@@ -45,7 +45,7 @@ export default function CopyTrading() {
         <section className={styles.videoSection} aria-labelledby="copytrading-video-title">
           <div className={styles.videoFrame}>
             <video autoPlay muted controls playsInline preload="metadata" aria-label="RealDeel CopyTrading demonstration">
-              <source src="/realdeel-copytrading.mp4?v=20260916" type="video/mp4" />
+              <source src="/realdeel-copytrading.mp4?v=20260917" type="video/mp4" />
               Your browser does not support video playback.
             </video>
           </div>
