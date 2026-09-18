@@ -49,8 +49,10 @@ export default function TradingBotBuy() {
             <div className="eyebrow light">REAL WORK. REAL CLIENT FEEDBACK.</div>
             <h2>See the work behind RealDeel.</h2>
             <p>RealDeel has developed trading bots for clients on Freelancer.com, a global marketplace. Explore our profile, completed projects and client reviews to see why traders trust us with their ideas.</p>
-            <div className="hero-actions">
+            <div>
               <a href="https://www.freelancer.com/u/sdqtrades" target="_blank" rel="noreferrer" className="primary-button">View Reviews on Freelancer.com →</a>
+            </div>
+            <div>
               <a href={TELEGRAM_CHANNEL_URL} target="_blank" rel="noreferrer" className="primary-button">Get RealDeel Trading Bot Now →</a>
             </div>
           </div>
