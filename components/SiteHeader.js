@@ -16,7 +16,6 @@ export default function SiteHeader() {
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
         </nav>
-        <Link href="/ai-trading-bot-free-usage" className="nav-cta">Try AI Bot Free</Link>
       </div>
     </header>
   );
