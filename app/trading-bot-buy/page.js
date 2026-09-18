@@ -1,7 +1,7 @@
 import SiteHeader from "../../components/SiteHeader";
 import ServiceLandingFooter from "../../components/ServiceLandingFooter";
 
-const WHATSAPP_URL = "https://wa.me/2349124688089?text=Hi%2C%20I%27m%20interested%20in%20purchasing%20the%20RealDeel%20AI%20Trading%20Bot%21";
+const TELEGRAM_CHANNEL_URL = "https://t.me/+thhE8lo9Ogg0ZGJk";
 
 const features = [
   ["Trades Gold (XAUUSD)", "Built specifically to analyze and trade Gold on the XAUUSD market."],
@@ -24,7 +24,7 @@ export default function TradingBotBuy() {
           <div className="eyebrow">REALDEEL TRADING BOT</div>
           <h1>Own the bot.<br /><span>Trade on your terms.</span></h1>
           <p>Purchase the RealDeel Trading Bot for your personal use and get a configurable automated strategy designed for structured Gold trading.</p>
-          <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="primary-button">Get RealDeel Trading Bot Now →</a>
+          <a href={TELEGRAM_CHANNEL_URL} target="_blank" rel="noreferrer" className="primary-button">Get RealDeel Trading Bot Now →</a>
         </section>
 
         <section className="section">
@@ -49,7 +49,7 @@ export default function TradingBotBuy() {
             <div className="eyebrow light">SUPPLY & DEMAND APPROACH</div>
             <h2>More time to analyze before execution.</h2>
             <p>The bot evaluates the 4-hour timeframe and places pending orders around identified supply and demand zones according to its configured strategy and risk settings.</p>
-            <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="primary-button">Get RealDeel Trading Bot Now →</a>
+            <a href={TELEGRAM_CHANNEL_URL} target="_blank" rel="noreferrer" className="primary-button">Get RealDeel Trading Bot Now →</a>
           </div>
         </section>
       </main>
