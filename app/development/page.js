@@ -67,7 +67,7 @@ export const metadata = {
 export default function Development() {
   return (
     <div className="service-page">
-      <SiteHeader />
+      <SiteHeader standalone />
       <main className="service-landing development-landing">
         <section className={`page-hero ${styles.hero}`}>
           <div className="eyebrow">CUSTOM TRADING SOFTWARE DEVELOPMENT</div>
@@ -141,7 +141,7 @@ export default function Development() {
           </section>
         </div>
       </main>
-      <ServiceLandingFooter />
+      <ServiceLandingFooter standalone />
     </div>
   );
 }

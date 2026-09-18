@@ -11,14 +11,13 @@ const features = [
   ["Adjustable Frequency", "Control how frequently the bot is allowed to identify and place eligible trades."],
   ["News Filter", "Includes a news filter to help manage exposure around high-impact economic events."],
   ["4-Hour Analysis", "Trades on the H4 timeframe, allowing more time to analyze market structure before placing pending orders around supply and demand zones."],
-  ["75% Win Rate", "The strategy has achieved a 75% win rate under its tested conditions. Performance can vary with market conditions."],
   ["Small-Account Support", "Flexible risk and lot-size settings allow the bot to be configured for smaller account balances."],
 ];
 
 export default function TradingBotBuy() {
   return (
     <div className="service-page">
-      <SiteHeader />
+      <SiteHeader standalone />
       <main className="service-landing personal-bot-landing">
         <section className="page-hero">
           <div className="eyebrow">REALDEEL TRADING BOT</div>
@@ -58,7 +57,7 @@ export default function TradingBotBuy() {
           </div>
         </section>
       </main>
-      <ServiceLandingFooter />
+      <ServiceLandingFooter standalone />
     </div>
   );
 }

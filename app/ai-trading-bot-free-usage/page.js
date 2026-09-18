@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import styles from "./page.module.css";
 
 const TELEGRAM_URL = "https://t.me/RealDeelAI_bot";
@@ -47,11 +46,10 @@ export default function AIBotFree() {
     <main className={styles.page}>
       <section className={styles.hero}>
         <header className={styles.header}>
-          <Link href="/" className={styles.brand}>
+          <div className={styles.brand}>
             <span className={styles.logoMark}><img src="/realdeel-logo.JPG" alt="RealDeel logo" /></span>
             <span>RealDeel<em>FX</em><small>AUTOMATE · TRADE · GROW</small></span>
-          </Link>
-          <Link href="/" className={styles.homeLink}>Home</Link>
+          </div>
           <a href={TELEGRAM_URL} target="_blank" rel="noreferrer" className={styles.outlineButton}>Try It Free <span>→</span></a>
         </header>
 
@@ -116,11 +114,10 @@ export default function AIBotFree() {
       </section>
 
       <footer className={styles.footer}>
-        <div className={styles.moreServices}><span>More ways to trade, automate and grow</span><Link href="/#services">Explore More RealDeel Solutions <b>→</b></Link></div>
-        <Link href="/" className={styles.brand}>
+        <div className={styles.brand}>
           <span className={styles.logoMark}><img src="/realdeel-logo.JPG" alt="" /></span>
           <span>ReaLDeeL <em>AI</em></span>
-        </Link>
+        </div>
         <p>Automated trading involves risk. Past or simulated performance does not guarantee future results.</p>
         <p>© {new Date().getFullYear()} RealDeel AI. All rights reserved.</p>
       </footer>

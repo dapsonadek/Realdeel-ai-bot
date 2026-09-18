@@ -16,7 +16,7 @@ const advantages = [
 export default function CopyTrading() {
   return (
     <div className={`service-page ${styles.page}`}>
-      <SiteHeader />
+      <SiteHeader standalone />
       <main className="service-landing copytrading-landing">
         <section className="page-hero">
           <div className="eyebrow">REALDEEL COPYTRADING</div>
@@ -66,7 +66,7 @@ export default function CopyTrading() {
           </div>
         </section>
       </main>
-      <ServiceLandingFooter />
+      <ServiceLandingFooter standalone />
     </div>
   );
 }

@@ -6,7 +6,7 @@ const WHATSAPP_URL = "https://wa.me/2349124688089?text=Hi%2C%20I%27m%20intereste
 export default function TradeCopierBuy() {
   return (
     <div className="service-page">
-      <SiteHeader />
+      <SiteHeader standalone />
       <main className="service-landing trade-copier-landing">
         <section className="page-hero">
           <div className="eyebrow">REALDEEL TRADE-COPIER</div>
@@ -48,7 +48,7 @@ export default function TradeCopierBuy() {
           </div>
         </section>
       </main>
-      <ServiceLandingFooter />
+      <ServiceLandingFooter standalone />
     </div>
   );
 }
