@@ -42,21 +42,6 @@ export default function CopyTrading() {
           </div>
         </section>
 
-        <section className={styles.videoSection} aria-labelledby="copytrading-video-title">
-          <div className={styles.videoFrame}>
-            <video autoPlay muted controls playsInline preload="metadata" aria-label="RealDeel CopyTrading demonstration">
-              <source src="/realdeel-copytrading.mp4?v=20260917" type="video/mp4" />
-              Your browser does not support video playback.
-            </video>
-          </div>
-          <div className={styles.videoContent}>
-            <div className="eyebrow">SEE COPYTRADING IN ACTION</div>
-            <h2 id="copytrading-video-title">Copy trades, not signals.</h2>
-            <p>See how a connected trading account follows a pro trader’s actions automatically, without waiting for a signal or entering trades manually.</p>
-            <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="primary-button">Ask About CopyTrading →</a>
-          </div>
-        </section>
-
         <section className="dark-band">
           <div>
             <div className="eyebrow light">HOW IT WORKS</div>
