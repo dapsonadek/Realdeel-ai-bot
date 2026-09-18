@@ -1,7 +1,7 @@
+import Script from "next/script";
 import SiteHeader from "../../components/SiteHeader";
 import ServiceLandingFooter from "../../components/ServiceLandingFooter";
-
-const TELEGRAM_CHANNEL_URL = "https://t.me/+thhE8lo9Ogg0ZGJk";
+import TradingBotPurchaseLink from "../../components/TradingBotPurchaseLink";
 
 const features = [
   ["Trades Gold (XAUUSD)", "Built specifically to analyze and trade Gold on the XAUUSD market."],
@@ -17,13 +17,24 @@ const features = [
 export default function TradingBotBuy() {
   return (
     <div className="service-page">
+      <Script id="realdeel-trading-bot-meta-pixel" strategy="afterInteractive">
+        {`!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','2015589922470530');
+fbq('track','PageView');`}
+      </Script>
+      <noscript><img height="1" width="1" style={{ display: "none" }} alt="" src="https://www.facebook.com/tr?id=2015589922470530&ev=PageView&noscript=1" /></noscript>
       <SiteHeader standalone />
       <main className="service-landing personal-bot-landing">
         <section className="page-hero">
           <div className="eyebrow">REALDEEL TRADING BOT</div>
           <h1>Own the bot.<br /><span>Trade on your terms.</span></h1>
           <p>Purchase the RealDeel Trading Bot for your personal use and get a configurable automated strategy designed for structured Gold trading.</p>
-          <a href={TELEGRAM_CHANNEL_URL} target="_blank" rel="noreferrer" className="primary-button">Get RealDeel Trading Bot Now →</a>
+          <TradingBotPurchaseLink />
         </section>
 
         <section className="section">
@@ -52,7 +63,7 @@ export default function TradingBotBuy() {
               <a href="https://www.freelancer.com/u/sdqtrades" target="_blank" rel="noreferrer" className="primary-button">View Reviews on Freelancer.com →</a>
             </div>
             <div>
-              <a href={TELEGRAM_CHANNEL_URL} target="_blank" rel="noreferrer" className="primary-button">Get RealDeel Trading Bot Now →</a>
+              <TradingBotPurchaseLink />
             </div>
           </div>
         </section>
