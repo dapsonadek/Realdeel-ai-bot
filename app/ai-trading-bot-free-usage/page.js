@@ -3,7 +3,7 @@
 import { useState } from "react";
 import styles from "./page.module.css";
 
-const TELEGRAM_URL = "https://t.me/RealDeelAI_bot";
+const TELEGRAM_URL = "https://t.me/+hQapQZSbiJMzYjU8";
 
 const faqs = [
   {
