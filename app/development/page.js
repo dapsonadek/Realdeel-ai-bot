@@ -3,7 +3,7 @@ import SiteHeader from "../../components/SiteHeader";
 import ServiceLandingFooter from "../../components/ServiceLandingFooter";
 import styles from "./page.module.css";
 
-const WHATSAPP_URL = "https://wa.me/2349124688089?text=Hi%2C%20I%27m%20interested%20in%20the%20trading%20development%20service%21";
+const WHATSAPP_URL = "https://wa.me/2348034434011?text=Hi%2C%20I%27m%20interested%20in%20the%20trading%20development%20service%21";
 const FREELANCER_URL = "https://www.freelancer.com/u/sdqtrades";
 
 const platforms = [
