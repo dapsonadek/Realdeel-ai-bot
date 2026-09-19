@@ -1,3 +1,4 @@
+import Script from "next/script";
 import SiteHeader from "../../components/SiteHeader";
 import ServiceLandingFooter from "../../components/ServiceLandingFooter";
 import styles from "./page.module.css";
@@ -67,6 +68,17 @@ export const metadata = {
 export default function Development() {
   return (
     <div className="service-page">
+      <Script id="realdeel-development-meta-pixel" strategy="afterInteractive">
+        {`!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','2015589922470530');
+fbq('track','PageView');`}
+      </Script>
+      <noscript><img height="1" width="1" style={{ display: "none" }} alt="" src="https://www.facebook.com/tr?id=2015589922470530&ev=PageView&noscript=1" /></noscript>
       <SiteHeader standalone />
       <main className="service-landing development-landing">
         <section className={`page-hero ${styles.hero}`}>
