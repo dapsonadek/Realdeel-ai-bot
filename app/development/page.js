@@ -3,7 +3,7 @@ import SiteHeader from "../../components/SiteHeader";
 import ServiceLandingFooter from "../../components/ServiceLandingFooter";
 import styles from "./page.module.css";
 
-const WHATSAPP_URL = "https://wa.me/2348034434011?text=Hi%2C%20I%27m%20interested%20in%20the%20trading%20development%20service%21";
+const TELEGRAM_URL = "https://t.me/realdeeltrade";
 const FREELANCER_URL = "https://www.freelancer.com/u/sdqtrades";
 
 const platforms = [
@@ -87,7 +87,7 @@ fbq('track','PageView');`}
           <p>Custom Indicators, Expert Advisors, Trading Strategies, Trade-copiers and Crypto Bots built around your specifications.</p>
           <p className={styles.marketNote}>For traders, firms and trading communities worldwide.</p>
           <div className={styles.heroActions}>
-            <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="primary-button">Discuss Your Project →</a>
+            <a href={TELEGRAM_URL} target="_blank" rel="noreferrer" className="primary-button">Discuss Your Project →</a>
             <a href={FREELANCER_URL} target="_blank" rel="noreferrer" className={styles.heroLink}>See our Portfolio on Freelancer.com</a>
           </div>
         </section>
@@ -116,7 +116,7 @@ fbq('track','PageView');`}
             </div>
             <div className={styles.reviewCta}>
               <span>Have a strategy or a technical brief ready?</span>
-              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">Discuss Your Project →</a>
+              <a href={TELEGRAM_URL} target="_blank" rel="noreferrer">Discuss Your Project →</a>
             </div>
           </div>
         </section>
@@ -147,7 +147,7 @@ fbq('track','PageView');`}
           </div>
           <div>
             <p>Whether you have a complete strategy or only a trading concept, we can translate defined rules into a practical automated tool.</p>
-            <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="primary-button">Discuss Your Project →</a>
+            <a href={TELEGRAM_URL} target="_blank" rel="noreferrer" className="primary-button">Discuss Your Project →</a>
             <div><a href={FREELANCER_URL} target="_blank" rel="noreferrer" className="text-link">See development portfolio →</a></div>
           </div>
           </section>
